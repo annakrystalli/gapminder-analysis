@@ -79,11 +79,14 @@ summary(lm)
 
 ```{r, echo=TRUE}
 library(ggplot2)
+library(plotly)
 
-ggplot(gapminder, 
+p <- ggplot(gapminder, 
        aes(x = gdpPercap, y = lifeExp, colour = continent)) +
   geom_point() + 
   scale_x_log10() 
+
+ggplotly(p)
 ```
 
 
